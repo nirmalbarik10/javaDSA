@@ -22,7 +22,7 @@ public class Pattern {
 		//printnumber10F(4);
 		//PrintSolidRhombus(4);
 		//PrintNumberPyramid(4);
-		PrintPalindromicPyramid(4);
+		PrintPalindromicPyramid1(4);
 	}
 	
 	private static void PrintPalindromicPyramid(int row) {
@@ -33,11 +33,32 @@ public class Pattern {
 	        	    
 	           }
 	           for(int j=1; j<=num; j++) {
-		        	  System.out.print(j+" ");		        	    
+		        	  System.out.print(j);		        	    
 		           }          
 	           
 	           for(int j=num-1; j>0; j--) {
-		        	  System.out.print(j+" ");		        	    
+		        	  System.out.print(j);		        	    
+		           } 
+	           num++;
+	           System.out.println();
+	       }
+
+		
+	}
+	
+	private static void PrintPalindromicPyramid1(int row) {
+		int num=1;
+		for(int i=row; i>=1; i--) {
+	           for(int j=1; j<=i; j++) {
+	        	  System.out.print(" ");
+	        	    
+	           }
+	           for(int j=num; j>=1; j--) {
+		        	  System.out.print(j);		        	    
+		           }          
+	           
+	           for(int j=2; j<=num; j++) {
+		        	  System.out.print(j);		        	    
 		           } 
 	           num++;
 	           System.out.println();
