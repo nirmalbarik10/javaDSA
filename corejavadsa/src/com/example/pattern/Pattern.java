@@ -15,7 +15,39 @@ public class Pattern {
 		//printSolidUltaTrangle(4);
 		
 		//create right solid triangle		
-		printRightSolidTrangle(5);
+		//printRightSolidTrangle(5);
+		//printNumberPattern(5);
+		printNumberPartenUpperTringle(5);
+	}
+	
+	private static void printNumberPartenUpperTringle(int row) {
+		
+	      
+	       for(int i=row; i>=1; i--) {
+	           for(int j=1; j<=i; j++) {
+	               System.out.print(j+" ");
+	           }
+
+
+	           System.out.println();
+	       }
+
+		
+	}
+
+	private static void printNumberPattern(int row) {
+		int n = 4;
+	      
+	       for(int i=1; i<=n; i++) {
+	           for(int j=1; j<=i; j++) {
+	               System.out.print(j+" ");
+	           }
+
+
+	           System.out.println();
+	       }
+
+		
 	}
 
 	private static void printRightSolidTrangle(int row) {
