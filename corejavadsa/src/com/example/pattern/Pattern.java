@@ -8,8 +8,21 @@ public class Pattern {
 
 		// create pattern with hollow rectangle 4*5 with star
 		// printHollowRectangle(4,5);
+		// create pattern with solid trangle 4*4 with star
+		//printSolidTrangle(4);
+		
 		// create pattern with solid trangle 4*5 with star
-		printSolidTrangle(4);
+		printSolidUltaTrangle(4);
+	}
+
+	private static void printSolidUltaTrangle(int row) {
+		for (int i = row; i >= 0; i--) {
+			for (int j = 0; j <= i; j++) {
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+		
 	}
 
 	private static void printSolidTrangle(int row) {
