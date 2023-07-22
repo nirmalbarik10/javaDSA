@@ -12,7 +12,28 @@ public class Pattern {
 		//printSolidTrangle(4);
 		
 		// create pattern with solid trangle 4*5 with star
-		printSolidUltaTrangle(4);
+		//printSolidUltaTrangle(4);
+		
+		//create right solid triangle		
+		printRightSolidTrangle(5);
+	}
+
+	private static void printRightSolidTrangle(int row) {
+		int n = 4;
+	      
+	       for(int i=n; i>=1; i--) {
+	           for(int j=1; j<i; j++) {
+	               System.out.print(" ");
+	           }
+
+
+	           for(int j=0; j<=n-i; j++) {
+	               System.out.print("*");
+	           }
+	           System.out.println();
+	       }
+
+		
 	}
 
 	private static void printSolidUltaTrangle(int row) {
