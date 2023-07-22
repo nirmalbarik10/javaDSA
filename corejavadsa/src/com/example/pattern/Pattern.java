@@ -20,10 +20,28 @@ public class Pattern {
 		//printNumberPartenUpperTringle(5);
 		//printNumberInorder(4);
 		//printnumber10F(4);
-		PrintSolidRhombus(4);
+		//PrintSolidRhombus(4);
+		PrintNumberPyramid(4);
 		
 	}
 	
+	private static void PrintNumberPyramid(int row) {
+		int num=1;
+		for(int i=row; i>=1; i--) {
+	           for(int j=1; j<=i; j++) {
+	        	  System.out.print(" ");
+	        	    
+	           }
+	           for(int j=1; j<=num; j++) {
+		        	  System.out.print(num+" ");		        	    
+		           }          
+	           num++;
+	           System.out.println();
+	       }
+
+		
+	}
+
 	private static void PrintSolidRhombus(int row) {
 		for(int i=row; i>=1; i--) {
 	           for(int j=1; j<=i; j++) {
