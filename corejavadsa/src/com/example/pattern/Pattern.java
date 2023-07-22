@@ -17,9 +17,41 @@ public class Pattern {
 		//create right solid triangle		
 		//printRightSolidTrangle(5);
 		//printNumberPattern(5);
-		printNumberPartenUpperTringle(5);
+		//printNumberPartenUpperTringle(5);
+		//printNumberInorder(4);
+		printnumber10F(4);
 	}
 	
+	private static void printnumber10F(int row) {
+		for(int i=1; i<=row; i++) {
+	           for(int j=1; j<=i; j++) {
+	        	   if((i+j)%2==0)
+	               System.out.print("1 ");
+	        	   else
+	        		 System.out.print("0 ");   
+	           }
+	           
+
+	           System.out.println();
+	       }
+		
+	}
+
+	private static void printNumberInorder(int row) {
+		int n = 1;
+	      
+	       for(int i=1; i<=row; i++) {
+	           for(int j=1; j<=i; j++) {
+	               System.out.print(++n +" ");
+	           }
+	           
+
+	           System.out.println();
+	       }
+
+		
+	}
+
 	private static void printNumberPartenUpperTringle(int row) {
 		
 	      
