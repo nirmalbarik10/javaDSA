@@ -6,7 +6,7 @@ public class SortArray {
 		int[] arr = {7,8,3,1,2};
 		//bubbleSort(arr);
 		//bubbleSortdesc(arr);
-		//selectionSort(arr);
+		selectionSort(arr);
 		insertionSort(arr);
 		
 		for(int i:arr) {
