@@ -21,8 +21,9 @@ public class ReCursion2 {
 			System.out.println(str+" ");
 			return;
 		}
-		//choices 3 may come
+		//choices n  come
 		printsubset( num-1, str+num);
+		//choices n not come
 		printsubset( num-1, str);
 		
 	}
