@@ -5,8 +5,12 @@ public class NQuen {
 	public static void main(String[] args) {
 		// given board 4*4
 		int n = 4;
-		char[][] board = { { 'X', 'X', 'X', 'X' }, { 'X', 'X', 'X', 'X' }, { 'X', 'X', 'X', 'X' },
-				{ 'X', 'X', 'X', 'X' } };
+		char[][] board = { 
+				{ 'X', 'X', 'X', 'X' },
+				{ 'X', 'X', 'X', 'X' }, 
+				{ 'X', 'X', 'X', 'X' },
+				{ 'X', 'X', 'X', 'X' } 
+				};
 		solveQ(board, 0);
 
 	}
@@ -20,55 +24,66 @@ public class NQuen {
 				System.out.println();
 			}
 			System.out.println();
-			return;
+			return ;
 		}
 		for(int j=0;j<board.length;j++) {
 			if(isSafe(board,row,j)) {
-				board[row][j]='Q';
-				solveQ(board,row+1);
-				board[row][j]='X';
+			 board[row][j]='Q';
+			 solveQ( board,  row+1);
+			 board[row][j]='X';
 			}
-			
 		}
 		
 	}
 
 	private static boolean isSafe(char[][] board, int row, int col) {
-		for(int i=0;i<board.length;i++) {
-			if(board[i][col]=='Q') {
-				return false;
-			}
-		}for(int j=0;j<board.length;j++) {
-			if(board[row][j]=='Q') {
-				return false;
-			}
-		}
+
+
+		
+		 //check col
+		 for(int j=0;j<board.length;j++) {
+			 if(board[row][j]=='Q') return false;
+		 }
+		 //check row
+		 for(int i=0;i<board.length;i++) {
+			 if(board[i][col]=='Q') return false;
+		 }
 		//upper left
-		for(int r=row,c=col;r>=0 && c>=0; r--,c--) {
-			if(board[r][c]=='Q') {
-				return false;
-			}
-		}
-		//upper right
-		for(int r=row,c=col;r>=0 && c<board.length; r--,c++) {
-			if(board[r][c]=='Q') {
-				return false;
-			}
-		}
-		//low left
-		for(int r=row,c=col;r<board.length && c>=0; r++,c--) {
-			if(board[r][c]=='Q') {
-		      return false;
-			}
-		}
-		//low right
-				for(int r=row,c=col;r<board.length && c<board.length; r++,c++) {
-					if(board[r][c]=='Q') {
-				      return false;
-					}
-				}
-		return true;
+	       int r = row;
+	       for(int c=col; c>=0 && r>=0; c--, r--) {
+	           if(board[r][c] == 'Q') {
+	               return false;
+	           }
+	       }
+	      
+	       //upper right
+	       r = row;
+	       for(int c=col; c<board.length && r>=0; r--, c++) {
+	           if(board[r][c] == 'Q') {
+	               return false;
+	           }
+	       }
+	      
+	       //lower left
+	       r = row;
+	       for(int c=col; c>=0 && r<board.length; r++, c--) {
+	           if(board[r][c] == 'Q') {
+	               return false;
+	           }
+	       }
+	      
+	       //lower right
+	       for(int c=col; c<board.length && r<board.length; c++, r++) {
+	           if(board[r][c] == 'Q') {
+	               return false;
+	           }
+	       }
+	      
+	       return true;
+	
+	
 	}
 
+	
 	
 }
